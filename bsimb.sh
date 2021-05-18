@@ -6,7 +6,7 @@
 
 # Define function
 pause(){
-	read -p "`echo $'\n>'`Press enter to reset box..."
+	read -p "`echo $'\n>'`Press enter to reset BSIMB..."
 }
 
 one(){	
@@ -21,7 +21,7 @@ two(){
 
 three(){
 	while true; do	
-	  read -p "`echo $'\n>'`Are you root? (Y/n): " YN
+	  read -p "`echo $'\n>'`Do you have root privileges? (Y/n): " YN
 	  case $YN in
 		[Yy]*) sudo lshw -short; break;;
 		[Nn]*) lshw -short; break;;
@@ -90,12 +90,12 @@ nine(){
 show_menus(){
 	clear
 	echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	echo "        SYSTEM INFO MENU BOX        "
+	echo "     BASIC SYSTEM INFO MENU BOX      "
 	echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 	echo "HARDWARE:"
 	echo " 1 - Get CPU architecture"
 	echo " 2 - Detailed CPU information "
-	echo " 3 - Hardware summary (su)"
+	echo " 3 - Hardware summary (requires root)"
 	echo "SYSTEM:"
 	echo " 4 - Get OS distribution and version"
 	echo " 5 - Get Linux Kernel version"
@@ -105,7 +105,7 @@ show_menus(){
 	echo " 8 - Get public IP address"
 	echo " 9 - Test download and upload speed"
 	echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	echo "x - Exit System Info"
+	echo " x - Exit BSIMB"
 	echo
 }
 
